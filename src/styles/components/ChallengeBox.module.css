@@ -108,3 +108,27 @@
 .challengeActive footer button.challengeSucceededButton {
   background: var(--green);
 }
+
+@media (max-width: 769px) {
+  .challengeBoxContainer {
+    max-width: 40rem;
+  }
+
+  .challengeActive main img {
+    margin-top: 1rem;
+  }
+
+  .challengeActive main p {
+    max-width: 29.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .challengeActive footer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .challengeActive footer button.challengeFailedButton {
+    margin-bottom: 1rem;
+  }
+}

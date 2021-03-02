@@ -3,8 +3,8 @@ import '../styles/global.css';
 
 function MyApp({ Component, pageProps }) {
   return (
-    <UserProvider>
-      <Component {...pageProps} />;
+    <UserProvider avatar="" name="">
+      <Component {...pageProps} />
     </UserProvider>
   );
 }

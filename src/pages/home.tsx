@@ -11,7 +11,6 @@ import ChallengeBox from '../components/ChallengeBox';
 import styles from '../styles/Pages/Home.module.css';
 import { CountdownProvider } from '../contexts/CountdownContext';
 import { ChallengesProvider } from '../contexts/ChallengesContext';
-import { UserProvider } from '../contexts/UserContext';
 
 interface HomeProps {
   name: string;
@@ -38,9 +37,7 @@ export default function Home(props: HomeProps) {
         <CountdownProvider>
           <section>
             <div>
-              <UserProvider>
-                <Profile name={props.name} avatar={props.avatar} />
-              </UserProvider>
+              <Profile name={props.name} avatar={props.avatar} />
               <CompletedChallenges />
               <Countdown />
             </div>

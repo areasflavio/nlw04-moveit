@@ -1,18 +1,23 @@
 .container {
-  height: 100vh;
+  min-height: 100vh;
+  width: 100%;
 
   display: flex;
 
   padding: 2rem 0;
 
-  background: var(--blue);
+  background-color: var(--blue);
+  background-image: url('../../../public/logo-home.png');
+  background-size: 100vh;
+  background-position: left;
+  background-repeat: no-repeat;
 }
 
 .loginContainer {
   display: flex;
   flex-direction: column;
 
-  margin: auto;
+  margin: auto 12.5rem auto auto;
 }
 
 .loginContainer > img {
@@ -63,6 +68,8 @@
 }
 
 .formContainer input {
+  width: 100%;
+
   border: none;
 
   background: linear-gradient(
@@ -96,4 +103,16 @@
   padding: 2rem;
 
   border-radius: 0px 0.3rem 0.3rem 0px;
+}
+
+@media (max-width: 769px) {
+  .loginContainer {
+    margin: auto;
+  }
+}
+
+@media (max-width: 376px) {
+  .loginContainer {
+    width: 90%;
+  }
 }

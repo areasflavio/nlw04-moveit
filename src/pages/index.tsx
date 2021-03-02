@@ -22,7 +22,7 @@ export default function Index() {
         <title>move.it</title>
       </Head>
 
-      <img src="logo-home.png" alt="" />
+      {/* <img src="logo-home.svg" alt="" /> */}
 
       <section className={styles.loginContainer}>
         <img src="logo-full-white.svg" alt="move.it" />

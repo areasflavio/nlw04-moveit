@@ -11,6 +11,7 @@ import ChallengeBox from '../components/ChallengeBox';
 import styles from '../styles/Pages/Home.module.css';
 import { CountdownProvider } from '../contexts/CountdownContext';
 import { ChallengesProvider } from '../contexts/ChallengesContext';
+import Sidebar from '../components/Sidebar';
 
 interface HomeProps {
   name: string;
@@ -22,32 +23,36 @@ interface HomeProps {
 
 export default function Home(props: HomeProps) {
   return (
-    <ChallengesProvider
-      level={props.level}
-      currentExperience={props.currentExperience}
-      challengesCompleted={props.challengesCompleted}
-    >
-      <div className={styles.container}>
-        <Head>
-          <title>Inicio | move.it</title>
-        </Head>
+    <div className={styles.wrapper}>
+      <Sidebar />
 
-        <ExperienceBar />
+      <ChallengesProvider
+        level={props.level}
+        currentExperience={props.currentExperience}
+        challengesCompleted={props.challengesCompleted}
+      >
+        <div className={styles.container}>
+          <Head>
+            <title>Inicio | move.it</title>
+          </Head>
 
-        <CountdownProvider>
-          <section>
-            <div>
-              <Profile name={props.name} avatar={props.avatar} />
-              <CompletedChallenges />
-              <Countdown />
-            </div>
-            <div>
-              <ChallengeBox />
-            </div>
-          </section>
-        </CountdownProvider>
-      </div>
-    </ChallengesProvider>
+          <ExperienceBar />
+
+          <CountdownProvider>
+            <section>
+              <div>
+                <Profile name={props.name} avatar={props.avatar} />
+                <CompletedChallenges />
+                <Countdown />
+              </div>
+              <div>
+                <ChallengeBox />
+              </div>
+            </section>
+          </CountdownProvider>
+        </div>
+      </ChallengesProvider>
+    </div>
   );
 }
 

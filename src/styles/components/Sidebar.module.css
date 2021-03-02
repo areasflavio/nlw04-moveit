@@ -1,0 +1,49 @@
+.sidebarContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 100%;
+  background: var(--white);
+
+  position: relative;
+}
+
+.sidebarContainer > img {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+
+  width: 3rem;
+}
+
+.controlsContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.controlsContainer span + span {
+  margin-top: 1rem;
+}
+
+.controlsContainer span {
+  position: relative;
+  width: 100%;
+  padding: 0 2.5rem;
+}
+
+.controlsContainer span img:hover {
+  cursor: pointer;
+}
+
+.controlsContainer span.active::after {
+  content: '';
+  height: 100%;
+  width: 0.25rem;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: var(--blue);
+  border-radius: 0 0.3rem 0.3rem 0;
+}

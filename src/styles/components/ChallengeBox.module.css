@@ -8,16 +8,22 @@
 
   text-align: center;
 
-  padding: 1.5rem 2rem;
+  /* padding: 1.5rem 2rem; */
   background: var(--white);
   border-radius: 0.3rem;
   box-shadow: 0px 0px 3.75rem rgba(0, 0, 0, 0.05);
+}
+
+.challengeContent {
+  padding: 1.5rem 2rem;
 }
 
 .challengeNotActive {
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  padding: 0 3.8rem;
 }
 
 .challengeNotActive strong {
@@ -28,16 +34,17 @@
 
 .challengeNotActive p {
   display: flex;
-  flex-direction: column;
   align-items: center;
 
+  text-align: left;
   line-height: 1.4;
+
   min-width: 70%;
   margin-top: 3rem;
 }
 
-.challengeNotActive p img {
-  margin-bottom: 1rem;
+.challengeNotActive p > img {
+  margin: 0 1.5rem 1rem 0;
 }
 
 .challengeActive {
@@ -63,6 +70,10 @@
   justify-content: center;
 }
 
+.challengeActive main > img {
+  margin-top: 2.375rem;
+}
+
 .challengeActive main strong {
   font-size: 2rem;
   font-weight: 600;
@@ -76,19 +87,25 @@
 }
 
 .challengeActive footer {
-  display: grid;
+  /* display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1rem;
+  gap: 1rem; */
+  display: flex;
+
+  margin-top: auto;
+
+  border-top: 1px solid var(--gray-line);
 }
 
 .challengeActive footer button {
+  width: 100%;
+
   display: flex;
   align-items: center;
   justify-content: center;
 
   height: 3rem;
   border: 0;
-  border-radius: 0.3rem;
 
   color: var(--white);
   font-size: 1rem;
@@ -102,11 +119,28 @@
 }
 
 .challengeActive footer button.challengeFailedButton {
+  background: var(--red-light);
+  color: var(--red);
+
+  border-radius: 0 0 0 0.3rem;
+  border-right: 1px solid var(--gray-line);
+}
+
+.challengeActive footer button.challengeFailedButton:hover {
   background: var(--red);
+  color: var(--white);
 }
 
 .challengeActive footer button.challengeSucceededButton {
+  background: var(--green-light);
+  color: var(--green);
+
+  border-radius: 0 0 0.3rem 0;
+}
+
+.challengeActive footer button.challengeSucceededButton:hover {
   background: var(--green);
+  color: var(--white);
 }
 
 @media (max-width: 769px) {

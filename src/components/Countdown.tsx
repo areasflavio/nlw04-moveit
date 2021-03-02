@@ -21,7 +21,7 @@ function Countdown() {
 
   useEffect(() => {
     setProgressSeconds(
-      ((25 * 60 - (minutes * 60 + seconds)) * 100) / (25 * 60)
+      ((0.1 * 60 - (minutes * 60 + seconds)) * 100) / (0.1 * 60)
     );
   }, [minutes, seconds]);
 

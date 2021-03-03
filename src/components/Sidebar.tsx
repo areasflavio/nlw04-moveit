@@ -1,10 +1,29 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useRouter } from 'next/router';
 
 import styles from '../styles/components/Sidebar.module.css';
 
 function Sidebar() {
+  const router = useRouter();
+
+  useEffect(() => {
+    const allIcons = document.querySelectorAll('img');
+
+    allIcons.forEach((icon) => {
+      if (window.location.pathname.includes(icon.alt.toLowerCase())) {
+        icon.parentElement.classList.add(`${styles.active}`);
+
+        icon.src = `icons/${icon.alt.toLowerCase()}-hover.svg`;
+      }
+
+      return;
+    });
+  }, []);
+
   function handleNav(e) {
-    console.log(e.target);
+    const routePath = String(e.target.alt).toLowerCase();
+
+    router.push(`/${routePath}`);
   }
 
   return (
@@ -12,11 +31,11 @@ function Sidebar() {
       <img src="logo-sidebar.svg" alt="move.it" />
 
       <section className={styles.controlsContainer}>
-        <span onClick={handleNav} className={styles.active}>
-          <img src="/icons/home-hover.svg" alt="Home" />
+        <span onClick={handleNav}>
+          <img src="/icons/home.svg" alt="Home" />
         </span>
         <span onClick={handleNav}>
-          <img src="/icons/award.svg" alt="Ranking" />
+          <img src="/icons/ranking.svg" alt="Ranking" />
         </span>
       </section>
     </aside>

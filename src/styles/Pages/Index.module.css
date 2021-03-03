@@ -53,11 +53,11 @@
   line-height: 1.875rem;
 }
 
-.loginGithubContainer:hover {
+/* .loginGithubContainer:hover {
   cursor: pointer;
 
   filter: brightness(0.9);
-}
+} */
 
 .formContainer {
   display: flex;

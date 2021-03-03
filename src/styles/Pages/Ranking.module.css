@@ -148,24 +148,12 @@
   }
 }
 
-@media (max-width: 1024px) {
-  .container {
-    /* padding: 3rem 4rem; */
-  }
-}
-
-@media (max-width: 769px) {
+@media (max-width: 940px) {
   .wrapper {
     flex-direction: column;
   }
 
   .container {
     padding-left: 2.5rem;
-  }
-}
-
-@media (max-width: 375px) {
-  .container section {
-    /* max-width: 100%; */
   }
 }

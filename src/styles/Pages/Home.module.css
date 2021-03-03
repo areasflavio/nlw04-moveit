@@ -11,7 +11,7 @@
   display: flex;
   flex-direction: column;
 
-  margin-left: 16rem;
+  margin: 0 auto;
   padding: 2rem 2.5rem;
 }
 
@@ -26,23 +26,18 @@
   margin-top: 3.5rem;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1280px) {
   .container {
-    padding: 3rem 4rem;
+    padding-left: 10rem;
   }
 }
 
-@media (max-width: 769px) {
-  .container section {
-    display: flex;
+@media (max-width: 940px) {
+  .wrapper {
     flex-direction: column;
-
-    margin: 3.5rem auto 0;
   }
-}
 
-@media (max-width: 375px) {
-  .container section {
-    max-width: 100%;
+  .container {
+    padding-left: 2.5rem;
   }
 }

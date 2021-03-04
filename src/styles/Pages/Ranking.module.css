@@ -49,7 +49,7 @@
 
 .sectionContainer ul li {
   display: grid;
-  grid-template-columns: 0.5fr 3fr 1.5fr 1fr;
+  grid-template-columns: minmax(63px, 0.5fr) 3fr 1.5fr 1fr;
 }
 
 .sectionContainer ul li:first-child span:nth-child(2) {
@@ -115,6 +115,19 @@
   display: flex;
   flex-direction: column;
 }
+.sectionContainer ul li div.profileData div strong {
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  color: var(--title);
+
+  margin-bottom: 0.5rem;
+
+  white-space: nowrap;
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+}
 
 .sectionContainer ul li div.profileData div small {
   display: flex;
@@ -133,15 +146,6 @@
   margin-right: 0.5rem;
 }
 
-.sectionContainer ul li div.profileData div strong {
-  font-weight: 600;
-  font-size: 1.25rem;
-  line-height: 1.5rem;
-  color: var(--title);
-
-  margin-bottom: 0.5rem;
-}
-
 @media (max-width: 1280px) {
   .container {
     padding-left: 10rem;
@@ -155,5 +159,86 @@
 
   .container {
     padding-left: 2.5rem;
+  }
+
+  .sectionContainer ul li div.profileData div strong {
+    max-inline-size: 15rem;
+  }
+}
+
+@media (max-width: 782px) {
+  .sectionContainer ul li div.profileData div strong {
+    max-inline-size: 10rem;
+  }
+}
+
+@media (max-width: 620px) {
+  .sectionContainer ul li {
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+  }
+
+  .sectionContainer ul li div {
+    max-height: 4rem;
+    justify-content: center;
+
+    align-self: stretch;
+  }
+
+  .sectionContainer ul li:first-child {
+    display: none;
+  }
+
+  .sectionContainer ul li div:first-child {
+    min-width: 4rem;
+
+    margin-right: 0;
+
+    border-radius: 0.3rem 0.3rem 0 0;
+  }
+
+  .sectionContainer ul li div:last-child {
+    padding-right: 1.5rem;
+
+    border-radius: 0 0 0.3rem 0.3rem;
+  }
+
+  .sectionContainer ul li div.profileData div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .sectionContainer ul li div.profileData div > strong {
+    margin-bottom: 0;
+    margin-right: 0.5rem;
+
+    max-inline-size: 15rem;
+  }
+}
+
+@media (max-width: 518px) {
+  .sectionContainer ul li div > img {
+    display: none;
+  }
+
+  .sectionContainer ul li div.profileData div > strong {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+@media (max-width: 424px) {
+  .sectionContainer ul li div.profileData div strong {
+    max-inline-size: 10rem;
+  }
+}
+
+@media (max-width: 350px) {
+  .sectionContainer ul li div.profileData div strong {
+    max-inline-size: 8rem;
   }
 }

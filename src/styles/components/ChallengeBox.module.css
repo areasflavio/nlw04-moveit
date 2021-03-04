@@ -8,7 +8,6 @@
 
   text-align: center;
 
-  /* padding: 1.5rem 2rem; */
   background: var(--white);
   border-radius: 0.3rem;
   box-shadow: 0px 0px 3.75rem rgba(0, 0, 0, 0.05);
@@ -87,9 +86,6 @@
 }
 
 .challengeActive footer {
-  /* display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem; */
   display: flex;
 
   margin-top: auto;
@@ -145,7 +141,12 @@
 
 @media (max-width: 769px) {
   .challengeBoxContainer {
+    margin-top: 1rem;
     max-width: 40rem;
+  }
+
+  .challengeNotActive {
+    padding: 3.8rem;
   }
 
   .challengeActive main img {
@@ -154,15 +155,6 @@
 
   .challengeActive main p {
     max-width: 29.8rem;
-    margin-bottom: 1rem;
-  }
-
-  .challengeActive footer {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .challengeActive footer button.challengeFailedButton {
     margin-bottom: 1rem;
   }
 }

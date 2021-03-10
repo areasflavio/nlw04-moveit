@@ -1,5 +1,7 @@
 <h1 align="center">move.it</h1>
 
+<img alt="demo_image" src=".github/demo.gif" width="100%">
+
 ## 📝 Description
 
 This is a project made at NLW#04, Rocketseat's event where I learned about NextJS and Server-Side Rendering. The final project is based on the version of the event with some features add by me, check it out the [Live Version](https://moveit-next-areasflavio.vercel.app/)

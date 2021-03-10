@@ -56,8 +56,7 @@ export default function Ranking(props: RankingProps) {
                       &nbsp;completados
                     </div>
                     <div>
-                      {/* <strong>{props.currentExperience}</strong>&nbsp;xp */}
-                      <strong>1825000</strong>&nbsp;xp
+                      <strong>{props.currentExperience}</strong>&nbsp;xp
                     </div>
                   </li>
                 ))}

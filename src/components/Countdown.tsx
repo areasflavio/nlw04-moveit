@@ -21,7 +21,7 @@ function Countdown() {
 
   useEffect(() => {
     setProgressSeconds(
-      ((0.1 * 60 - (minutes * 60 + seconds)) * 100) / (0.1 * 60)
+      ((25 * 60 - (minutes * 60 + seconds)) * 100) / (25 * 60)
     );
   }, [minutes, seconds]);
 
@@ -54,7 +54,6 @@ function Countdown() {
                 onClick={resetCountdown}
               >
                 Abandonar ciclo
-                {/* <img src="/icons/close-button.svg" alt="" /> */}
               </button>
               <div>
                 <div style={{ width: `${progressSeconds}%` }} />
